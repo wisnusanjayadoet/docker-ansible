@@ -13,7 +13,7 @@
     yum:
      name: python-docker
      state: present
-    when: ansible-distribution == "CentOS"
+     when: ansible-distribution == "CentOS"
   - name: pull image docker
     docker_image:
      name: "{{ image }}"
@@ -27,5 +27,3 @@
      published_port:
       - 10000:80
      recreate: yes
-  
-  
