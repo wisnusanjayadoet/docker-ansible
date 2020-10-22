@@ -1,0 +1,31 @@
+- hosts: server
+  vars:
+  - image: wisnusanjayadoet/apache-docker-ansible
+  tasks:
+   - name: install python-docker di ubuntu
+     apt:
+      name:
+       - python
+       - python-docker
+      state: present
+     when: ansible_distribution == "Ubuntu"
+   - name: install python dockeer centos
+     yum:
+      name: python-docker
+      state: present
+     when: ansible-distribution == "CentOS"
+   - name: pull image docker
+     docker_images:
+      name: "{{ image }}"
+      state: present
+      force: yes
+    - name: create containers
+      docker_containers:
+       name: docker-ansible
+       image: "{{ image}}"
+       state; started
+       published_port:
+       - 10000:80
+       recreate: yes
+  
+  
