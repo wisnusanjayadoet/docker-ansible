@@ -26,6 +26,6 @@
       state: started
      published_port:
       - 10000:80
-      recreate: yes
+     recreate: yes
   
   
