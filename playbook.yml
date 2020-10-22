@@ -19,13 +19,13 @@
       name: "{{ image }}"
       state: present
       force: yes
-    - name: create containers
-      docker_containers:
-       name: docker-ansible
-       image: "{{ image}}"
-       state; started
-       published_port:
-       - 10000:80
-       recreate: yes
+   - name: create containers
+     docker_containers:
+      name: docker-ansible
+      image: "{{ image}}"
+      state; started
+      published_port:
+      - 10000:80
+      recreate: yes
   
   
