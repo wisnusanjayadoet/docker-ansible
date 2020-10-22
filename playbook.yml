@@ -22,7 +22,7 @@
   - name: create containers
     docker_containers:
      name: docker-ansible
-     image: "{{ image}}"
+     image: "{{ image }}"
      state: started
      published_port:
       - 10000:80
