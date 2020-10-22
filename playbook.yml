@@ -15,7 +15,7 @@
       state: present
      when: ansible-distribution == "CentOS"
    - name: pull image docker
-     docker_images:
+     docker_image:
       name: "{{ image }}"
       state: present
       force: yes
