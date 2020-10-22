@@ -1,6 +1,6 @@
 - hosts: server
   vars:
-  - image: wisnusanjayadoet/apache-docker-ansible
+  - image: wisnusanjaya/apache-docker-ansible
   tasks:
    - name: install python-docker di ubuntu
      apt:
